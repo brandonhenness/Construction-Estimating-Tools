@@ -1,9 +1,9 @@
-# Estimating Tools
+# Construction Estimating Tools
 
 > ## ⚠️ Important Notice
 > This project is currently under active development and is not yet considered production-ready. Features, layouts, and estimators are still evolving. Feedback, testing, and contributions are welcome as the tool suite continues to grow.
 
-In construction, one of the most valuable assets is not lumber, steel, or fasteners, but **accurate planning**. A mistake on paper can cost thousands on the jobsite. Estimating Tools was created with one goal in mind:  
+In construction, one of the most valuable assets is not lumber, steel, or fasteners, but **accurate planning**. A mistake on paper can cost thousands on the jobsite. Construction Estimating Tools was created with one goal in mind:  
 **to make material estimation fast, visual, accurate, and accessible anywhere a browser exists.**
 
 This project is designed as a growing collection of focused estimating utilities. Each tool solves a specific real-world problem without unnecessary overhead, installs, servers, or build systems. Everything runs directly in the browser. Open it and go to work.
@@ -12,7 +12,7 @@ This project is designed as a growing collection of focused estimating utilities
 
 ## Precision Through Simplicity
 
-Modern estimating software often comes with steep learning curves, licensing costs, and bloated workflows. Estimating Tools takes the opposite approach:
+Modern estimating software often comes with steep learning curves, licensing costs, and bloated workflows. Construction Estimating Tools takes the opposite approach:
 
 - No accounts
 - No tracking
@@ -85,7 +85,7 @@ New estimators can be added without affecting existing tools.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/brandonhenness/estimating-tools.git
+git clone https://github.com/brandonhenness/Construction-Estimating-Tools.git
 ````
 
 ### Launch the Tool Suite
@@ -152,7 +152,7 @@ This project exists to **speed up planning**, **reduce mistakes**, and **elimina
 
 ## License
 
-Estimating Tools is licensed under the [GNU General Public License v3.0](LICENSE).
+Construction Estimating Tools is licensed under the [GNU General Public License v3.0](LICENSE).
 
 ---
 
