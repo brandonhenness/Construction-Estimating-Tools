@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Window & Door Trim Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav style="margin-bottom:0.75rem;">
+        <a href="../index.html" style="font-size:0.9rem; text-decoration:none; color:#2563eb;">
+            ← Back to estimating tools
+        </a>
+    </nav>
+    <h1>Window & Door Trim Planner</h1>
+    <p class="muted">
+        Dimensions are in <strong>inches</strong>. Interior and exterior trim are handled separately so
+        you can use standard lumber for interior and Hardie for exterior.
+    </p>
+
+    <!-- INPUTS -->
+    <div id="input-section">
+        <fieldset id="settings-fieldset" class="settings collapsed">
+            <legend>
+                <button type="button" id="toggle-settings" class="settings-toggle">
+                    ▶ Settings
+                </button>
+            </legend>
+            <div class="settings-body">
+                <div class="grid">
+                    <label>
+                        Interior trim width
+                        <select id="interiorTrimWidth">
+                            <option value="3.5" selected>3.5"</option>
+                            <option value="5.5">5.5"</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Exterior trim width
+                        <select id="exteriorTrimWidth">
+                            <option value="3.5" selected>3.5"</option>
+                            <option value="5.5">5.5"</option>
+                        </select>
+                    </label>
+
+                    <div class="overhang-group full-width">
+                        <label class="stacked">
+                            Top overhang
+                            <input type="number" id="topOverhang" value="0.5" step="0.125" />
+                        </label>
+                        <button type="button" id="overhangLockBtn" class="lock-btn" aria-pressed="false">
+                            🔒
+                        </button>
+                        <label class="stacked">
+                            Bottom overhang
+                            <input type="number" id="bottomOverhang" value="0.25" step="0.125" />
+                        </label>
+                    </div>
+
+                    <label>
+                        Craftsman head angle
+                        <input type="number" id="headAngle" value="10" step="0.5" />
+                        °
+                    </label>
+
+                    <label>
+                        Trim thickness (returns)
+                        <input type="number" id="trimThickness" value="0.75" step="0.0625" />
+                        in
+                    </label>
+
+                    <label>
+                        Extra material allowance
+                        <input type="number" id="wastePercent" value="10" step="1" />
+                        %
+                    </label>
+
+                    <label>
+                        Saw kerf width
+                        <input type="number" id="kerfWidth" value="0.125" step="0.0625" />
+                        in
+                    </label>
+
+                    <label>
+                        Interior board lengths (ft)
+                        <input type="text" id="interiorBoardLengths" value="8,10,12" />
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="exteriorHardie" checked />
+                        Exterior trim is Hardie (12 ft only)
+                    </label>
+
+                    <label>
+                        Exterior board lengths (ft)
+                        <input type="text" id="exteriorBoardLengths" value="8,10,12" />
+                    </label>
+                </div>
+                <p class="muted">
+                    Wall type controls boxed returns board width: 2x4 → 3.5 in, 2x6 → 5.5 in.
+                    Trim thickness controls interior returns height math. If Hardie is selected, exterior boards are 12
+                    ft only.
+                </p>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Openings (Windows / Doors)</legend>
+            <div class="muted" style="margin-bottom:.5rem;">
+                Add each window or door with clear dimensions. Name is just for your reference.
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Width (in)</th>
+                        <th>Height (in)</th>
+                        <th>Wall</th>
+                        <th>Interior trim</th>
+                        <th>Exterior trim</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="opening-rows"></tbody>
+            </table>
+            <button id="add-opening" type="button">Add opening</button>
+        </fieldset>
+
+        <button id="generate" type="button" class="btn-primary">
+            Generate materials & cut sheets
+        </button>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="output-section" class="section">
+        <div id="materials-section"></div>
+        <div id="cut-sheets-section"></div>
+    </div>
+
+    <!-- Your JS is now external -->
+    <script src="app.js"></script>
+</body>
+
+</html>
